@@ -1,0 +1,38 @@
+GET http://localhost:3000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJ0ZXN0N0BleGFtcGxlLmNvbSIsImlhdCI6MTYzODYyODM4OSwiZXhwIjoxNjM4NjI4NDE5fQ.cS_-HrhQ2JG3mN_TuCQSHTWpGjMxNk7BAIUAeowQpn0
+
+###  Register
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email":"ngoccuong061@gmail.com",
+    "password": "cuong123"
+}
+
+### Login
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email":"ngoccuong061@gmail.com",
+    "password": "cuong123"
+}
+
+### Refresh token
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJuZ29jY3VvbmcwNjFAZ21haWwuY29tIiwiaWF0IjoxNjM4NzA0NjE5LCJleHAiOjE2MzkzMDk0MTl9.SUIa37aqcB5IsI2E_q6aTEUVZMK687NCXqgI90_acBc"
+}
+
+### Logout
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwiZW1haWwiOiJuZ29jY3VvbmcwNjFAZ21haWwuY29tIiwiaWF0IjoxNjM4NzA0NjE5LCJleHAiOjE2MzkzMDk0MTl9.SUIa37aqcB5IsI2E_q6aTEUVZMK687NCXqgI90_acBc"
+}
